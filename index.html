@@ -161,8 +161,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h2><h3 id="登陆界面"><a href="#登陆界面" class="headerlink" title="登陆界面"></a>登陆界面</h3><p><img src="//yangxinyang777.github.io/2019/10/13/基于高德地图WebAPI的WebGIS前端界面搭建/login.png" alt></p>
-<p><img src="http://note.youdao.com/noteshare?id=941e98860e6b32a439d0f0858714b8b3" alt></p>
+        <h1 id="基于高德地图WebAPI的WebGIS前端页面搭建"><a href="#基于高德地图WebAPI的WebGIS前端页面搭建" class="headerlink" title="基于高德地图WebAPI的WebGIS前端页面搭建"></a>基于高德地图WebAPI的WebGIS前端页面搭建</h1><h2 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h2><h3 id="登陆界面"><a href="#登陆界面" class="headerlink" title="登陆界面"></a>登陆界面</h3><p><img src="http://note.youdao.com/noteshare?id=941e98860e6b32a439d0f0858714b8b3" alt="login 图片"></p>
+<h3 id="主界面"><a href="#主界面" class="headerlink" title="主界面"></a>主界面</h3><p><img src="http://note.youdao.com/noteshare?id=a1de40f79ae5766ede570bdf9a71aa9e" alt="main 图片"></p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="WebGIS"><a href="#WebGIS" class="headerlink" title="WebGIS"></a>WebGIS</h3><p>  什么是WebGIS？就是将GIS这门学科所能提供的功能，以B/S技术展现给用户，使用户只需要在浏览器上便能使用这些GIS功能。与其他全栈式开发相同，但WebGIS更侧重的是在应用层的地图服务。</p>
+<p><img src="http://www.gissky.net/Article/UploadFiles/201409/20140914092007275.png" alt="img"></p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><p>如所有的Web项目一样，前端由HTML、CSS、JS、Flex等语言组成。</p>
+<h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><p>开发时，我们要选择适合自己的中间件。不同的中间件有其特性，如果是一般项目，tomcat等是很合适的，其使用方便，相关技术支持和资料也很好查找。但是如果是大型的集群项目，Weblogic和WebShpere可能是更好的选择，但是这两个中间件首先配置就是有难度的，同时不同的版本，可能对某些jar包的支持存在问题。如果项目必须使用国产的中间件，TongWeb和Apusics是不错的选择。</p>
+<h3 id="地图服务器"><a href="#地图服务器" class="headerlink" title="地图服务器"></a>地图服务器</h3><p>在WebGIS中，与其他一般的Web工程有明显区别的就体现在地图服务器上面。一般的地图服务器都由已有的软件商提供了解决方案，比较流行的有AGS、Geoserver、MapServer、SuperServer等。利用这些地图服务器我们能很好的实现地图的发布以及对一些空间查询和空间操作的支持。</p>
+<h3 id="业务服务器"><a href="#业务服务器" class="headerlink" title="业务服务器"></a>业务服务器</h3><p>业务服务器是Web项目里不可获取的一环。不管是利用哪些已有框架编写，比如Spring、Struts、Hibernate等，我们一般还是会将业务服务器的实现分为三个层次，即有名的MVC模式。而不同的框架里这三个层次的实现各有差别。</p>
+<h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>WebGIS的数据大致可以分为三种，一种是地图、影像数据，一种是空间属性数据、一种是业务数据。地图、影像数据一般是一些png或者其他格式的数据组成。</p>
+<p>在GIS中有个很重要的概念，即影像金字塔。这个概念主要是为了加速地图在前端的显示。而我们准备地图、影像数据时，也一般会首先对这些数据进行切图。</p>
+<p>空间属性数据，是通过一些工具将已经整理好的数据进行入库。对于AGS，只有连接的是入库数据的mxd，才能发布成FeatureServer服务，以供数据的编辑。当然，空间数据入库后还可以支持业务逻辑的使用。</p>
+<p>第三种数据，业务逻辑数据，是每个Web项目必须有的，它根据不同的业务需求将业务所需的数据进行采集和入库。</p>
 
       
 
